@@ -69,6 +69,6 @@ export default function RootLayout() {
 ```
 
 ### 4. **Index Screen**
-![alt text](image.png)
+![alt text](introduce.png)
 ### 5. **HomePage Screen**
-![alt text](image-1.png)
+![alt text](HomePage.png)
