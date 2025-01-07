@@ -1,5 +1,5 @@
 # Project Title
-
+Introduce Application with auto transfer to HomePage
 ## Description
 This project is a simple React Native application where I demonstrate self-introduction with an image. The app will navigate to the homepage after 10 seconds automatically. This README will guide you through the steps to replicate the application and show the result.
 
@@ -69,6 +69,8 @@ export default function RootLayout() {
 ```
 
 ### 4. **Index Screen**
+Màn hình `Index` giới thiệu về người dùng và tự động chuyển hướng đến màn hình `Homepage` sau 10 giây.
 ![alt text](introduce.png)
+Màn hình `Homepage` chỉ đơn giản hiển thị một thông điệp chào mừng người dùng.
 ### 5. **HomePage Screen**
 ![alt text](HomePage.png)
