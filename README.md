@@ -1,16 +1,18 @@
-# Welcome to your Expo app 👋
+# Project Title
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## Description
+This project is a simple React Native application where I demonstrate self-introduction with an image. The app will navigate to the homepage after 10 seconds automatically. This README will guide you through the steps to replicate the application and show the result.
 
-## Get started
+## Steps to Reproduce
 
-1. Install dependencies
-
-   ```bash
+### 1. **Setting Up the Environment**
+- Make sure you have [Node.js](https://nodejs.org/en/) and [Expo CLI](https://docs.expo.dev/get-started/installation/) installed.
+- Create a new Expo project using:
+  ```bash
    npm install
    ```
 
-2. Start the app
+- Start the app
 
    ```bash
     npx expo start
@@ -35,3 +37,33 @@ npm run reset-project
 
 This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
 
+### 2. **Install Dependencies**
+
+- npm install @react-navigation/native @react-navigation/stack react-native-screens react-native-safe-area-context
+
+### 3. **Create Navigation Stack**
+
+import { Stack } from 'expo-router';
+
+<!-- export default function RootLayout() {
+  return (
+    <Stack
+      screenOptions={{
+        headerStyle: {
+          backgroundColor: '#000',
+        },
+        headerTintColor: '#fff',
+        headerTitleStyle: {
+          fontWeight: 'bold',
+        },
+      }}>
+      <Stack.Screen name="index" />
+      <Stack.Screen name="homepage" />
+    </Stack>
+  );
+} -->
+
+### 4. **Index Screen**
+![alt text](image.png)
+### 5. **HomePage Screen**
+![alt text](image-1.png)
