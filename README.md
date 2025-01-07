@@ -43,25 +43,29 @@ This command will move the starter code to the **app-example** directory and cre
 
 ### 3. **Create Navigation Stack**
 
-   import { Stack } from 'expo-router';
+## Code
 
-   export default function RootLayout() {
-   return (
-      <Stack
-         screenOptions={{
-         headerStyle: {
-            backgroundColor: '#000',
-         },
-         headerTintColor: '#fff',
-         headerTitleStyle: {
-            fontWeight: 'bold',
-         },
-         }}>
-         <Stack.Screen name="index" />
-         <Stack.Screen name="homepage" />
-      </Stack>
-   );
-   }
+```javascript
+import { Stack } from 'expo-router';
+
+export default function RootLayout() {
+  return (
+    <Stack
+      screenOptions={{
+        headerStyle: {
+          backgroundColor: '#000', // Black background for the header
+        },
+        headerTintColor: '#fff', // White text color for the header
+        headerTitleStyle: {
+          fontWeight: 'bold', // Bold font for the header title
+        },
+      }}
+    >
+      <Stack.Screen name="index" /> {/* Index screen */}
+      <Stack.Screen name="homepage" /> {/* Homepage screen */}
+    </Stack>
+  );
+}
 
 ### 4. **Index Screen**
 ![alt text](image.png)
