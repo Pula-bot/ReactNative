@@ -66,6 +66,7 @@ export default function RootLayout() {
     </Stack>
   );
 }
+```
 
 ### 4. **Index Screen**
 ![alt text](image.png)
