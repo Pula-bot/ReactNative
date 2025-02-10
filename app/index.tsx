@@ -1,56 +1,30 @@
-import { NavigationProp, ParamListBase, useNavigation } from "@react-navigation/native";
-import React, { useEffect } from "react";
-import { Image, StyleSheet, Text, View } from "react-native";
+import React, { useEffect } from 'react';
+import { View, Text, StyleSheet } from 'react-native';
+import { useRouter } from 'expo-router';  // Correct import for expo-router
 
-export default function Index() {
-  const navigation = useNavigation<NavigationProp<ParamListBase>>();
+const SplashScreen = () => {
+  const router = useRouter();  // Using useRouter from expo-router for navigation
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      navigation.navigate("homepage");
-    }, 10000);
-
-    return () => clearTimeout(timer);
-  }, [navigation]);
+    // After 5 seconds, navigate to the HomeScreen
+    setTimeout(() => {
+      router.push('/(home)/HomeScreen');  // Navigate using router.push
+    }, 5000);  // Splash screen for 5 seconds
+  }, [router]);
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Self-Introduce</Text>
-      <Text style={styles.subtitle}>
-        My name is Tran Minh Tri, I'm a software engineer. I'm from Vietnam. Currently, I'm studying at HCMC University of Technology and Education.
-      </Text>
-      <Image
-        style={styles.image}
-        source={{
-          uri: "https://th.bing.com/th/id/OIP.2fWUtSv5XDIpw6iEo9KycQHaH7?rs=1&pid=ImgDetMain",
-        }}
-      />
+    <View style={styles.centered}>
+      <Text>Splash Screen</Text>
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
-  container: {
+  centered: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    padding: 20,
-    backgroundColor: "#f5f5f5",
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: "bold",
-    color: "#333",
-    marginBottom: 10,
-  },
-  subtitle: {
-    fontSize: 16,
-    color: "#666",
-    textAlign: "center",
-  },
-  image: {
-    width: 200, 
-    height: 200, 
-    marginTop: 20, 
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
+
+export default SplashScreen;
